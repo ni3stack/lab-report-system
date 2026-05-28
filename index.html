@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Labs</title>
+    <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="app-header">
+            <h2>Sai <span>Laboratory</span></h2>
+            <p>Diagnostic and Blood Testing center</p>
+            <span>Contact: +91 7338562068</span>
+        </div>
+        <form id="labForm" class="grid form-grid">
+          <div class="form-group">
+            <label for="patientName">Patient Name</label>
+            <input 
+              type="text" 
+              id="patientName" 
+              placeholder="Enter patient name"
+              required>
+          </div>
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" required min="1" max="120">
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" required>
+              <option>Select</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Test Type</label>
+            <select id="testId" required>
+              <option value="">Select</option>
+              <option value="cbc">CBC</option>
+              <option value="lft">LFT</option>
+              <option value="kft">KFT</option>
+              <option value="lipid">Lipid Profile</option>
+              <option value="thyroid">Thyroid Profile</option>
+              <option value="sugar">Blood Sugar</option>
+              <option value="hba1c">HbA1c</option>
+              <option value="electrolytes">Electrolytes</option>
+              <option value="calcium">Calcium</option>
+              <option value="iron">Iron Study</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label>Test Parameters</label>
+            <div id="fields" class="grid grid-2"></div>
+          </div>
+          <div class="form-group full">
+            <button class= "form-submit-button" type="submit">Create Report</button>
+          </div>
+        </form>
+
+        <section class="report-table-section">
+            <div class="section-header">
+              <label>Recent Reports</label>
+            </div>
+            <table class="reports-table">
+                <thead>
+                  <tr>
+                    <th>Report Id</th>
+                    <th>Patient Name</th>
+                    <th>Test</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="reportTableBody">
+                    <!-- JS contorls data -->
+                </tbody>
+            </table>
+        </section>
+
+        <div id="printArea">
+            <div class="report-header">Sai Diagnostic Laboratory</div>
+            <div class="report-body">
+                <p><strong>Report ID:</strong> <span id="reportId"></span></p>
+                <p><strong>Date:</strong> <span id="reportDate"></span></p>
+                <p><strong>Name : </strong> <span id="pName"></span></p>
+                <p><strong>Age/Gender :</strong> <span id="pAgeGender"></span></p>
+                <table id="reportTable" class="print-report-table">
+                </table>
+            </div>
+            <div class="watermark">CONFIDENTIAL</div>
+            <div class="report-footer">Authorized Signatory</div>
+        </div>
+    </div>
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
