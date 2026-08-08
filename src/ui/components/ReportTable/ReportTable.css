@@ -1,0 +1,62 @@
+/*
+    =========================
+    Reports Table Styles
+    =========================
+*/
+
+.reports-section {
+   margin-top: 2rem;
+}
+
+.section-title {
+   font-size: 1.5rem;
+   font-weight: 600;
+   margin-bottom: 1rem;
+}
+
+.table-container {
+   overflow-x: auto;
+   background-color: #fff;
+   border-radius: 12px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reports-table {
+   width: 100%;
+
+}
+
+.reports-table thead {
+   background-color: #f8fafc;
+}
+
+.reports-table th, 
+.reports-table td {
+    padding: 0.9rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eecece;
+}
+
+.reports-table th {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.reports-table td {
+    font-size: 0.9rem;
+}
+
+.reports-table tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 2rem;
+    color: #777;
+}
+
+.action-cell {
+    width: 120px;
+}
